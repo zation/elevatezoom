@@ -1,0 +1,8 @@
+{
+  "name": "elevatezoom",
+  "version": "2.2.3",
+  "authors": [],
+  "main": "jquery.elevatezoom.js",
+  "license": "MIT",
+  "private": true
+}
