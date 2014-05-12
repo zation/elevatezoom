@@ -258,7 +258,7 @@ if ( typeof Object.create !== 'function' ) {
 				//self.zoomContainer = $('<div/>').addClass('zoomContainer').css({"position":"relative", "height":self.nzHeight, "width":self.nzWidth});
 
 				self.zoomContainer = $('<div class="zoomContainer" style="-webkit-transform: translateZ(0);position:absolute;left:'+self.nzOffset.left+'px;top:'+self.nzOffset.top+'px;height:'+self.nzHeight+'px;width:'+self.nzWidth+'px;"></div>');
-				$('body').append(self.zoomContainer);	
+				$(self.options.zoomContainerWrapper).append(self.zoomContainer);
 
 
 				//this will add overflow hidden and contrain the lens on lens mode       
@@ -1771,7 +1771,8 @@ if ( typeof Object.create !== 'function' ) {
 			onComplete: $.noop,
 			onZoomedImageLoaded: function() {},
 			onImageSwap: $.noop,
-			onImageSwapComplete: $.noop
+			onImageSwapComplete: $.noop,
+			zoomContainerWrapper: 'body'
 	};
 
 })( jQuery, window, document );
